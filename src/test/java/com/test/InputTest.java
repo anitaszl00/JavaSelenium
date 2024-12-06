@@ -16,7 +16,7 @@ public class InputTest extends BaseTest{
     public void inputTest(){
 
 
-// Tworzenie obiektu EditPage z WebDriverem
+// Tworzenie obiektu InputPage z WebDriverem
         InputPage inputPage = new InputPage(driver);
         inputPage.openEditPage();;
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -28,9 +28,9 @@ public class InputTest extends BaseTest{
         inputPage.getAttribute();
         inputPage.clear();
 
-        inputPage.disabledField();
+        inputPage.confirmButton();
 
-        Assert.assertFalse("Pole powinno być wyłączone", inputPage.disabledField());
+        Assert.assertFalse("Pole powinno być wyłączone", inputPage.confirmButton());
         System.out.println("Pole jest nieaktywne");
 
 

@@ -38,10 +38,9 @@ public void openEditPage() {
         clearTheText.clear();
     }
 
+    public boolean confirmButton() {
+       return disabledField("noEdit");
 
-    public boolean disabledField() {
-        WebElement disabledText = driver.findElement(By.id("noEdit"));
-        return disabledText.isEnabled();
     }
 
     public boolean readOnly() {
