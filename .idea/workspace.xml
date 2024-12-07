@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9541651-97c7-462e-b7d2-76103e6269ab" name="Changes" comment="ButtonPage">
+    <list default="true" id="b9541651-97c7-462e-b7d2-76103e6269ab" name="Changes" comment="Przeniesienie isEnabled() do BasePage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/ButtonPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/ButtonPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/InputPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/InputPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/test/ButtonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/ButtonTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/test/InputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/test/InputTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,22 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.InputTest.inputTest (1)">
+  <component name="RunManager" selected="JUnit.ButtonTest">
+    <configuration name="ButtonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.ButtonTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ButtonTest.buttonTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaSelenium" />
       <extension name="coverage">
@@ -114,29 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InputTest.keboardTab" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="najnowszynowy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.InputTest" />
-      <option name="METHOD_NAME" value="keboardTab" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InputTest.inputTest (1)" />
+        <item itemvalue="JUnit.ButtonTest" />
         <item itemvalue="JUnit.ButtonTest.buttonTest (1)" />
+        <item itemvalue="JUnit.InputTest.inputTest (1)" />
         <item itemvalue="JUnit.ButtonTest.buttonTest" />
         <item itemvalue="JUnit.InputTest.inputTest" />
-        <item itemvalue="JUnit.InputTest.keboardTab" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733347469904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Przeniesienie isEnabled() do BasePage">
+      <option name="closed" value="true" />
+      <created>1733506439968</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733506439968</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +201,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="InputPages" />
     <MESSAGE value="ButtonPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="ButtonPage" />
+    <MESSAGE value="Przeniesienie isEnabled() do BasePage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Przeniesienie isEnabled() do BasePage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

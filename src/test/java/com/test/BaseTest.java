@@ -22,7 +22,7 @@ public class BaseTest {
     @After
     public void close() {
 
-        driver.quit();
-    }
+       driver.quit();
+   }
 
     }
