@@ -8,6 +8,7 @@ public class BasePage {
 
     protected WebDriver driver; //  pole WebDrivera
 
+
     // Konstruktor przyjmujący WebDriver
     public BasePage(WebDriver driver){
         this.driver = driver;
@@ -18,10 +19,11 @@ public class BasePage {
         driver.get(url);
     }
 
-    // sprawdzenie czy element jest dostępny
+   //  sprawdzenie czy element jest dostępny
     public boolean disabledField(String id) {
         WebElement field = driver.findElement(By.id(id));
         return field.isEnabled();
     }
+
 
 }

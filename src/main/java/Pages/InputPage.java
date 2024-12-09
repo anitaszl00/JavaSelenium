@@ -7,6 +7,13 @@ import org.openqa.selenium.Keys;
 
 public class InputPage extends BasePage {
 
+    private final By enterFullName = By.id("fullName");
+    private final By clickTab = By.id("join");
+    private final By textBox = By.id("getMe");
+    private final By clearTheText = By.id("clearMe");
+    private final By dontWrite = By.id("dontwrite");
+
+
     public InputPage(WebDriver driver){
         super(driver);    //  Przekazanie WebDrivera do konstruktora klasy nadrzędnej (BasePage)
     }
@@ -16,26 +23,21 @@ public void openEditPage() {
 }
 
     public void fillFullName(String fullName) {
-        WebElement enterFullName = driver.findElement(By.id("fullName"));
-        enterFullName.sendKeys(fullName);
-
+        driver.findElement(enterFullName).sendKeys(fullName);
     }
 
     public void keyboardTab() {
-        driver.findElement(By.id("join")).sendKeys(Keys.TAB);
+        driver.findElement(clickTab).sendKeys(Keys.TAB);
     }
 
-
     public void getAttribute() {
-          WebElement textbox = driver.findElement(By.id("getMe"));
-          String value = textbox.getAttribute("value");
+          WebElement insideTextbox = driver.findElement(textBox);
+          String value = insideTextbox.getAttribute("value");
           System.out.println("Wartość to " + value);
-
     }
 
     public void clear() {
-        WebElement clearTheText = driver.findElement(By.id("clearMe"));
-        clearTheText.clear();
+        driver.findElement(clearTheText).clear();
     }
 
     public boolean confirmButton() {
@@ -44,7 +46,7 @@ public void openEditPage() {
     }
 
     public boolean readOnly() {
-        WebElement readOnlyText = driver.findElement(By.id("dontwrite"));
+        WebElement readOnlyText = driver.findElement(dontWrite);
         String readOnlyAttribute = readOnlyText.getAttribute("readonly");
         return readOnlyAttribute != null && readOnlyAttribute.equals("true");
     }
