@@ -14,17 +14,17 @@ public class BasePage {
 
 
     // Konstruktor przyjmujący WebDriver
-    public BasePage(WebDriver driver){
+    protected BasePage(WebDriver driver){
         this.driver = driver;
     }
 
     //otwarcie strony
-    public void openPage(String url){
+    protected void openPage(String url){
         driver.get(url);
     }
 
    //  sprawdzenie czy element jest dostępny
-    public boolean disabledField(By locator) {
+    protected boolean disabledField(By locator) {
         return findElement(locator).isEnabled();
     }
 
@@ -39,4 +39,12 @@ public class BasePage {
         .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    protected String getElementText(By locator){
+        return findElement(locator).getText();
+    }
+
+    //sprawdź czy element jest widoczny
+    protected boolean isElementDisplayed(By locator){
+        return findElement(locator).isDisplayed();
+    }
 }

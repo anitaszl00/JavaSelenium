@@ -3,11 +3,8 @@ package com.test;
 import Pages.ButtonPage;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -20,10 +17,10 @@ public class ButtonTest extends BaseTest {
 
        ButtonPage buttonPage = new ButtonPage(driver);
 
-       buttonPage.openEditPage();
+       buttonPage.openButtonPage();
 
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-       buttonPage.click();
+       buttonPage.clickHomeButton();
        buttonPage.comeBack();
        Point location = buttonPage.findLocation();
        System.out.println("Przycisk znajduje się w pozycji X: " + location.getX() + ", Y: " + location.getY());
@@ -38,14 +35,12 @@ public class ButtonTest extends BaseTest {
        Assert.assertFalse("Pole powinno być nieaktywne", buttonPage.buttonIsEnabled());
        System.out.println("Pole jest nieaktywne");
 
+       buttonPage.holdButton();
 
-      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//h2[text()='Button Hold!']]")));
-      buttonPage.holdButton();
+       Assert.assertTrue("Długi przycisk powinien być widoczny", buttonPage.isLongButtonVisible());
 
-      //czekam
-        WebElement holdButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//h2[text()='Button has been long pressed']]")));
-      String longButton = holdButton.getText(); //pobieram tekst nowego przycisku
-      Assert.assertEquals("Button has been long pressed", longButton);
+       String longButton = buttonPage.getLongButtonText();
+       Assert.assertEquals("Button has been long pressed", longButton);
     }
 
 }
