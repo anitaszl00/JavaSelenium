@@ -23,7 +23,6 @@ public class ButtonTest extends BaseTest {
        buttonPage.openEditPage();
 
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-       wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("home")));
        buttonPage.click();
        buttonPage.comeBack();
        Point location = buttonPage.findLocation();
@@ -38,6 +37,7 @@ public class ButtonTest extends BaseTest {
        buttonPage.buttonIsEnabled();
        Assert.assertFalse("Pole powinno być nieaktywne", buttonPage.buttonIsEnabled());
        System.out.println("Pole jest nieaktywne");
+
 
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.//h2[text()='Button Hold!']]")));
       buttonPage.holdButton();

@@ -13,16 +13,20 @@ public class ButtonPage extends BasePage{
 
 
     public ButtonPage(WebDriver driver){
-        super(driver);    //  Przekazanie WebDrivera do konstruktora klasy nadrzędnej (BasePage)
+        super(driver);    //  Przekazanie WebDrivera do konstruktora klasy nadrzędnej (BasePage), konstruktor który przkazuje referencję do klasy wyższej
     }
 
     public void openEditPage() {
+
         openPage("https://letcode.in/buttons"); // Wywołanie metody z BasePage
     }
 
     public void click(){
-        driver.findElement(goToHome).click();
+        waitForElement(goToHome,10);
+        findElement(goToHome).click();
     }
+
+
 
     public void comeBack(){
         driver.navigate().back();
@@ -43,7 +47,7 @@ public class ButtonPage extends BasePage{
     }
 
     public boolean buttonIsEnabled() {
-       return disabledField("isDisabled");
+       return disabledField(By.id("isDisabled"));
 
     }
 

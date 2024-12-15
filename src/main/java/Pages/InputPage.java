@@ -23,6 +23,7 @@ public void openEditPage() {
 }
 
     public void fillFullName(String fullName) {
+        waitForElement(enterFullName, 10);
         driver.findElement(enterFullName).sendKeys(fullName);
     }
 
@@ -41,7 +42,7 @@ public void openEditPage() {
     }
 
     public boolean confirmButton() {
-       return disabledField("noEdit");
+       return disabledField(By.id("noEdit"));
 
     }
 
