@@ -27,6 +27,11 @@ public void openEditPage() {
         driver.findElement(enterFullName).sendKeys(fullName);
     }
 
+    public String getFullName(){
+        WebElement fullNameField = findElement(enterFullName);
+        return fullNameField.getAttribute("value");
+    }
+
     public void keyboardTab() {
         driver.findElement(clickTab).sendKeys(Keys.TAB);
     }
@@ -39,6 +44,11 @@ public void openEditPage() {
 
     public void clear() {
         driver.findElement(clearTheText).clear();
+    }
+
+    public String getClearTheText(){
+        WebElement clearTheTextValue = findElement(clearTheText);
+        return clearTheTextValue.getAttribute("value");
     }
 
     public boolean confirmButton() {

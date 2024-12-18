@@ -3,11 +3,6 @@ package com.test;
 import Pages.InputPage;
 import org.junit.Assert;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 
 public class InputTest extends BaseTest{
@@ -18,27 +13,32 @@ public class InputTest extends BaseTest{
 
 // Tworzenie obiektu InputPage z WebDriverem
         InputPage inputPage = new InputPage(driver);
-        inputPage.openEditPage();;
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("fullName")));
+        inputPage.openEditPage();
 
-        inputPage.fillFullName("Jan Kowalski");
+        String expectedFullName = "Jan Kowalski";
+        inputPage.fillFullName(expectedFullName);
+        String actualFullName = inputPage.getFullName();
+
+        Assert.assertEquals("Tekst w polu Enter your full Name nie zgadza się", expectedFullName, actualFullName);
+
+
         inputPage.keyboardTab();
 
         inputPage.getAttribute();
         inputPage.clear();
+
+        String clearedValue = inputPage.getClearTheText();
+
+        Assert.assertEquals("Pole nie zostało wyczyszczone", "", clearedValue);
 
         inputPage.confirmButton();
 
         Assert.assertFalse("Pole powinno być wyłączone", inputPage.confirmButton());
         System.out.println("Pole jest nieaktywne");
 
-
         inputPage.readOnly();
         Assert.assertTrue("To pole powinno być readonly", inputPage.readOnly());
         System.out.println("Pole jest tylko do odczytu");
-
-
 
     }
 
