@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b9541651-97c7-462e-b7d2-76103e6269ab" name="Changes" comment="Dodanie asercji do InputTest">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/DropdownPage.java" afterDir="false" />
+    <list default="true" id="b9541651-97c7-462e-b7d2-76103e6269ab" name="Changes" comment="Dodanie testu Dropdown">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/AlertPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/test/AlertTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/DropdownPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/DropdownPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,23 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.DropdownTest.dropDownTest">
+  <component name="RunManager" selected="JUnit.AlertTest.alertTest">
+    <configuration name="AlertTest.alertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaSelenium" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.test" />
+      <option name="MAIN_CLASS_NAME" value="com.test.AlertTest" />
+      <option name="METHOD_NAME" value="alertTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ButtonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaSelenium" />
       <extension name="coverage">
@@ -64,22 +82,6 @@
     </configuration>
     <configuration name="ButtonTest.buttonTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaSelenium" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.test" />
-      <option name="MAIN_CLASS_NAME" value="com.test.ButtonTest" />
-      <option name="METHOD_NAME" value="buttonTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ButtonTest.buttonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="najnowszynowy" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.test.*" />
@@ -128,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AlertTest.alertTest" />
         <item itemvalue="JUnit.DropdownTest.dropDownTest" />
         <item itemvalue="JUnit.InputTest.inputTest (1)" />
         <item itemvalue="JUnit.ButtonTest.buttonTest (1)" />
         <item itemvalue="JUnit.ButtonTest" />
-        <item itemvalue="JUnit.ButtonTest.buttonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +219,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734553945057</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Dodanie testu Dropdown">
+      <option name="closed" value="true" />
+      <created>1734882622346</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734882622346</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,7 +256,8 @@
     <MESSAGE value="Dodanie / przeniesienie metod do BasePage" />
     <MESSAGE value="Optymalizacja kodu i poprawa klasy BasePage" />
     <MESSAGE value="Dodanie asercji do InputTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodanie asercji do InputTest" />
+    <MESSAGE value="Dodanie testu Dropdown" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodanie testu Dropdown" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -255,6 +266,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Pages/DropdownPage.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.StackOverflowError" package="java.lang" />
